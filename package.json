@@ -1,0 +1,17 @@
+{
+  "name": "selenium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.js"
+  },
+  "author": "vladdominator",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0",
+    "selenium-webdriver": "^4.6.1"
+  }
+}
