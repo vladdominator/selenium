@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.js"
+    "test": "mocha test/**/*.js",
+    "sample-test": "browserstack-node-sdk mocha test/**/*.js --timeout=80000"
   },
   "author": "vladdominator",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "browserstack-local": "^1.5.1",
     "chai": "^4.3.7",
     "mocha": "^10.1.0",
     "selenium-webdriver": "^4.6.1"
+  },
+  "devDependencies": {
+    "browserstack-node-sdk": "^1.2.9"
   }
 }

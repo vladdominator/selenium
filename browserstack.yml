@@ -1,0 +1,14 @@
+userName: bsuser_jKv2lu
+accessKey: 9Sovy8pwQQisntTfe9PN
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: Chrome
+    browserVersion: latest-beta
+parallelsPerPlatform: 1
+browserstackLocal: true
+buildName: browserstack-build-1
+projectName: BrowserStack Sample
+debug: false
+networkLogs: false
+consoleLogs: errors
