@@ -6,10 +6,8 @@ import {DEFAULT_BASKET_PAGE_URL, DEFAULT_PRODUCT_PAGE_URL, DEFAULT_PRODUCT_SIZE}
 
 describe('Add to Basket.', () => {
     beforeEach(async function () {
-        const capabilities = {
-            ...Capabilities.chrome(),
-        };
-        this.driver = await new Builder().usingServer('http://localhost:4444/wd/hub').withCapabilities(capabilities).build();
+        const capabilities = {'browserName': 'chrome'};
+        this.driver = await new Builder().usingServer('http://localhost:4444/wd/hub').forBrowser(Browser.CHROME).build();
         await this.driver.manage().window().maximize();
     });
 

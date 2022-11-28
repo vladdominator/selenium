@@ -8,7 +8,7 @@ describe('Registration user.', () => {
         const capabilities = {
             ...Capabilities.chrome(),
         };
-        this.driver = await new Builder().usingServer('http://localhost:4444/wd/hub').withCapabilities(capabilities).build();
+        this.driver = await new Builder().usingServer('http://localhost:4444/wd/hub').forBrowser(Browser.CHROME).build();
         await this.driver.manage().window().maximize();
     });
 
