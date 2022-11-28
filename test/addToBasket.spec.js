@@ -1,12 +1,15 @@
 import {expect} from "chai";
-import {Browser, Builder} from "selenium-webdriver";
+import {Browser, Builder, Capabilities} from "selenium-webdriver";
 import {ProductPage} from "../pages/ProductPage.js";
 import {BasketPage} from "../pages/BasketPage.js";
 import {DEFAULT_BASKET_PAGE_URL, DEFAULT_PRODUCT_PAGE_URL, DEFAULT_PRODUCT_SIZE} from "../constants/constants.js";
 
 describe('Add to Basket.', () => {
     beforeEach(async function () {
-        this.driver = await new Builder().forBrowser(Browser.CHROME).build();
+        const capabilities = {
+            ...Capabilities.chrome(),
+        };
+        this.driver = await new Builder().usingServer('http://localhost:4000/wd/hub').withCapabilities(capabilities).build();
         await this.driver.manage().window().maximize();
     });
 
