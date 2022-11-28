@@ -9,7 +9,7 @@ describe('Add to Basket.', () => {
         const capabilities = {
             ...Capabilities.chrome(),
         };
-        this.driver = await new Builder().usingServer('http://localhost:4000/wd/hub').withCapabilities(capabilities).build();
+        this.driver = await new Builder().usingServer('http://localhost:4444/wd/hub').withCapabilities(capabilities).build();
         await this.driver.manage().window().maximize();
     });
 
