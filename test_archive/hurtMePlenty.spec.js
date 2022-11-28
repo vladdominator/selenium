@@ -1,8 +1,8 @@
 import {Browser, Builder} from "selenium-webdriver";
-import {ResultsPage} from "../pages/google-cloud/ResultsPage.js";
-import {CalculatorPage} from "../pages/google-cloud/CalculatorPage.js";
-import {MailPage} from "../pages/google-cloud/MailPage.js";
-import {HomePage} from "../pages/google-cloud/HomePage.js";
+import {ResultsPage} from "../archive/pages/google-cloud/ResultsPage.js";
+import {CalculatorPage} from "../archive/pages/google-cloud/CalculatorPage.js";
+import {MailPage} from "../archive/pages/google-cloud/MailPage.js";
+import {HomePage} from "../archive/pages/google-cloud/HomePage.js";
 
 describe('3', () => {
     it('Should test Hurt Me Plenty task.', async function () {

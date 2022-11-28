@@ -1,7 +1,7 @@
 import {Browser, Builder} from "selenium-webdriver";
-import {HomePage} from "../pages/pastebin/HomePage.js";
-import {PastePage} from "../pages/pastebin/PastePage.js";
-import {PASTEBIN_PAGE} from "../constants/constants.js";
+import {HomePage} from "../archive/pages/pastebin/HomePage.js";
+import {PastePage} from "../archive/pages/pastebin/PastePage.js";
+import {PASTEBIN_PAGE} from "../archive/constants/constants.js";
 
 describe('2', () => {
     it('Should test Bring It On task.', async function () {

@@ -1,7 +1,7 @@
-import {HomePage} from "../pages/pastebin/HomePage.js";
-import {PastePage} from "../pages/pastebin/PastePage.js";
+import {HomePage} from "../archive/pages/pastebin/HomePage.js";
+import {PastePage} from "../archive/pages/pastebin/PastePage.js";
 import {Browser, Builder} from 'selenium-webdriver';
-import {PASTEBIN_PAGE} from "../constants/constants.js";
+import {PASTEBIN_PAGE} from "../archive/constants/constants.js";
 
 describe('1', () => {
     it('Should test I Can Win task.', async () => {

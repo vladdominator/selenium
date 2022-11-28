@@ -12,7 +12,7 @@ class HomePage {
     }
 
     async inputSearchValue(text) {
-        await this.driver.findElement(By.css('.devsite-search-field')).sendKeys(text, Key.ENTER);
+        await this.driver.findElement(By.css('.devsite-search-field')).setAttribute('value', value);
 
         return this;
     }

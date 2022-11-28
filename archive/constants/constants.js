@@ -1,0 +1,4 @@
+const DEFAULT_LOADING_TIME = 100000;
+const PASTEBIN_PAGE = 'https://pastebin.com';
+
+export {DEFAULT_LOADING_TIME, PASTEBIN_PAGE};
