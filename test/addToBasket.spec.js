@@ -9,8 +9,13 @@ const service = new chrome.ServiceBuilder('/usr/lib/node_modules/chromedriver/bi
 
 describe('Add to Basket.', () => {
     beforeEach(async function () {
+        const chromeCapabilities = Capabilities.chrome();
+        const chromeOptions = {
+            'args': ["--no-sandbox", "--headless", "--disable-dev-shm-usage", "--window-size=1920x1080"]
+        };
+        chromeCapabilities.set('chromeOptions', chromeOptions);
         const capabilities = {
-            ...Capabilities.chrome(),
+            ...chromeCapabilities,
         };
         this.driver = await new Builder().usingServer('http://localhost:4444/wd/hub').withCapabilities(capabilities).forBrowser(Browser.CHROME).setChromeService(service).build();
         await this.driver.manage().window().maximize();
