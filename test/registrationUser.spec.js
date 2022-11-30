@@ -4,17 +4,12 @@ import {DEFAULT_REGISTRATION_PAGE_URL, MAIL_GENERATOR_PAGE_URL} from "../constan
 import {MailPage} from "../archive/pages/google-cloud/MailPage.js";
 import chrome from 'selenium-webdriver/chrome.js';
 
-const service = new chrome.ServiceBuilder('/usr/lib/node_modules/chromedriver/bin/chromedriver');
+const service = new chrome.ServiceBuilder('node_modules/chromedriver/lib/chromedriver/chromedriver.exe');
 
 describe('Registration user.', () => {
     beforeEach(async function () {
-        const chromeCapabilities = Capabilities.chrome();
-        const chromeOptions = {
-            'args': ["--no-sandbox", "--headless", "--disable-dev-shm-usage", "--window-size=1920x1080"]
-        };
-        chromeCapabilities.set('chromeOptions', chromeOptions);
         const capabilities = {
-            ...chromeCapabilities,
+            ...Capabilities.chrome(),
         };
         this.driver = await new Builder().usingServer('http://localhost:4444/wd/hub').withCapabilities(capabilities).forBrowser(Browser.CHROME).setChromeService(service).build();
         await this.driver.manage().window().maximize();
