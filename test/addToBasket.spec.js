@@ -9,10 +9,7 @@ const service = new chrome.ServiceBuilder('node_modules/chromedriver/lib/chromed
 
 describe('Add to Basket.', () => {
     beforeEach(async function () {
-        const capabilities = {
-            ...Capabilities.chrome(),
-        };
-        this.driver = await new Builder().usingServer('http://localhost:4444/wd/hub').withCapabilities(capabilities).forBrowser(Browser.CHROME).setChromeService(service).build();
+        this.driver = await new Builder().forBrowser(Browser.CHROME).build();
         await this.driver.manage().window().maximize();
     });
 
