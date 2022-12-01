@@ -2,13 +2,10 @@ import {Browser, Builder, Capabilities} from "selenium-webdriver";
 import {RegistrationPage} from "../pages/RegistrationPage.js";
 import {DEFAULT_REGISTRATION_PAGE_URL, MAIL_GENERATOR_PAGE_URL} from "../constants/constants.js";
 import {MailPage} from "../archive/pages/google-cloud/MailPage.js";
-import chrome from 'selenium-webdriver/chrome.js';
-
-const service = new chrome.ServiceBuilder('/usr/lib/node_modules/chromedriver/bin/chromedriver');
 
 describe('Registration user.', () => {
     beforeEach(async function () {
-        this.driver = await new Builder().forBrowser(Browser.CHROME).setChromeService(service).build();
+        this.driver = await new Builder().forBrowser(Browser.CHROME).build();
         await this.driver.manage().window().maximize();
     });
 

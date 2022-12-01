@@ -3,13 +3,10 @@ import {Browser, Builder, Capabilities} from "selenium-webdriver";
 import {ProductPage} from "../pages/ProductPage.js";
 import {BasketPage} from "../pages/BasketPage.js";
 import {DEFAULT_BASKET_PAGE_URL, DEFAULT_PRODUCT_PAGE_URL, DEFAULT_PRODUCT_SIZE} from "../constants/constants.js";
-import chrome from 'selenium-webdriver/chrome.js';
-
-const service = new chrome.ServiceBuilder('/usr/lib/node_modules/chromedriver/bin/chromedriver');
 
 describe('Add to Basket.', () => {
     beforeEach(async function () {
-        this.driver = await new Builder().forBrowser(Browser.CHROME).setChromeService(service).build();
+        this.driver = await new Builder().forBrowser(Browser.CHROME).build();
         await this.driver.manage().window().maximize();
     });
 
