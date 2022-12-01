@@ -4,7 +4,7 @@ import {DEFAULT_REGISTRATION_PAGE_URL, MAIL_GENERATOR_PAGE_URL} from "../constan
 import {MailPage} from "../archive/pages/google-cloud/MailPage.js";
 import chrome from 'selenium-webdriver/chrome.js';
 
-const service = new chrome.ServiceBuilder('node_modules/chromedriver/lib/chromedriver/chromedriver.exe');
+const service = new chrome.ServiceBuilder('/usr/lib/node_modules/chromedriver/bin/chromedriver');
 
 describe('Registration user.', () => {
     beforeEach(async function () {

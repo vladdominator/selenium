@@ -5,7 +5,7 @@ import {BasketPage} from "../pages/BasketPage.js";
 import {DEFAULT_BASKET_PAGE_URL, DEFAULT_PRODUCT_PAGE_URL, DEFAULT_PRODUCT_SIZE} from "../constants/constants.js";
 import chrome from 'selenium-webdriver/chrome.js';
 
-const service = new chrome.ServiceBuilder('node_modules/chromedriver/lib/chromedriver/chromedriver.exe');
+const service = new chrome.ServiceBuilder('/usr/lib/node_modules/chromedriver/bin/chromedriver');
 
 describe('Add to Basket.', () => {
     beforeEach(async function () {
