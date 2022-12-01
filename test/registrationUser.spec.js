@@ -39,7 +39,7 @@ describe('Registration user.', () => {
 
         await this.driver.sleep(8000);
 
-    }).timeout(20000);
+    }).timeout(40000);
 
     afterEach(async function () {
         await this.driver.quit();

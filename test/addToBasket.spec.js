@@ -26,7 +26,7 @@ describe('Add to Basket.', () => {
             await basketPage.openPage(DEFAULT_BASKET_PAGE_URL);
             await basketPage.checkCorrectSize();
         }
-    }).timeout(20000);
+    }).timeout(40000);
 
     afterEach(async function () {
         await this.driver.quit();
