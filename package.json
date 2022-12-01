@@ -17,7 +17,6 @@
     "selenium-webdriver": "^4.6.1"
   },
   "devDependencies": {
-    "browserstack-node-sdk": "^1.2.9",
-    "chromedriver": "^107.0.3"
+    "browserstack-node-sdk": "^1.2.9"
   }
 }
