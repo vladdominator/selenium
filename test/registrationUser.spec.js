@@ -8,7 +8,7 @@ const service = new chrome.ServiceBuilder('/usr/lib/node_modules/chromedriver/bi
 
 describe('Registration user.', () => {
     beforeEach(async function () {
-        this.driver = await new Builder().forBrowser(Browser.CHROME).build();
+        this.driver = await new Builder().forBrowser(Browser.CHROME).setChromeService(service).build();
         await this.driver.manage().window().maximize();
     });
 
